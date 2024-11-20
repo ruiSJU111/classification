@@ -1,0 +1,295 @@
+
+<!-- saved from url=(0035)https://diffusion-vision.github.io/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- from MDCA -->
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="author" content="Nimol Thuon">
+    <meta name="description"
+        content="Multimodal Understanding: SYLLABLE ANALYSIS AUGMENTATION STRANGY IN PALM-LEAF PROJECT">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="">
+    <!-- Format -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="../format/app.css">
+    <link rel="stylesheet" href="../format/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script src="../format/app.js"></script>
+
+    <title>Isolted Gylph Classification/Recongtions in Palm Leaf Project. </title>
+    <!-- <link rel="icon" href="iitd_logo.png" type="image/png"> -->
+    <link rel="icon" href="" type="image/png">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link rel="stylesheet" href="./css/css2">
+    <style>
+        .title {
+          color: black; /* Set default color */
+        }
+      
+        .gray-text {
+          color: #828282; /* Use your desired shade of grey */
+          /* Bold*/
+          font-weight: bold;
+        }
+        .gray-text2 {
+          color: #515151; /* Use your desired shade of grey */
+          /* Bold*/
+          font-weight: bold;
+        }
+        .author {
+            color: #088df3; /* Use your desired shade of grey */
+        }
+        .affiliations2 {
+            color: #7d7d7d; /* Use your desired shade of grey */
+            text-align: center;
+            font-size: smaller;
+        }
+        .affiliations {
+            font-size: larger;
+        }
+        .logo {
+            position: fixed;
+        }
+        .logo img {
+            position: fixed;
+            width: 90px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+            top: 10px; /* Adjust as needed */
+            right: 10px; /* Adjust as needed */
+            z-index: 999; /* Ensure the logo appears on top of other content */
+            
+        }
+        .center {
+            text-align: center;
+        }
+        .bigger-font {
+            font-size: 24px; /* Adjust the font size as needed */
+        }
+        .bold-text {
+            font-weight: bold;
+        }
+        .left-align {
+            text-align: left;
+        }
+        .font-size-author-names {
+            font-size: 21px;
+        }
+        .center-align {
+            text-align: center;
+        }
+        .section{
+            font-size: 150%;
+            font-weight: 500;
+            /* background: rgba(0,0,0,0.03); */
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            color: #565656;
+            text-align: center;
+            /* padding-left: 0.5em; */
+        }
+      </style>
+    </head>
+    
+<body data-new-gr-c-s-check-loaded="14.1162.0" data-gr-ext-installed="">
+    <div class="container">
+    <!-- <div class="BbxBP a3ETed K5Zlne" jsname="WA9qLc" jscontroller="RQOkef" jsaction="rcuQ6b:ywL4Jf;VbOlFf:ywL4Jf;FaOgy:ywL4Jf; keydown:Hq2uPe; wheel:Ut4Ahc;" data-top-navigation="true" data-is-preview="true"></div> -->
+<!--     <div class="logo">
+        <img src="" alt="Logo">
+    </div> -->
+    <p class="title"><span class="gray-text">Isolted Gylph Classification</span><br>Isolted Gylph Classification/Recongtions in Palm Leaf Project.</p>
+    <p class="gray-text2 center bigger-font">ICFHR 2022, APSIPA ASC 2024, CVIU Journal (Under review)</p>
+    <!-- <p class="title">Effective Conditioning of Diffusion Models for Monocular Depth Estimation</p> -->
+
+    <p class="author">
+        <span class="author font-size-author-names">
+            <a href="">
+            Nimol&nbsp;Thuon*</a>
+        </span>
+        <span class="author font-size-author-names">
+            <a href="">
+                Jun&nbsp;Du*</a>
+        </span>
+ 
+    </p>
+    <div class="affiliations">
+        <!-- <a href="https://home.iitd.ac.in/"> -->
+            1. National Engineering Laboratory for Speech and 
+Language Information Processing (NEL-SLIP),
+
+University of Science and Technology of China, Hefei, Anhui, China
+
+
+        <!-- </a> -->
+    </div>
+        <div class="affiliations">
+        <!-- <a href="https://home.iitd.ac.in/"> -->
+           2. iFLYTEK Research, Hefei, Anhui, China
+
+
+        <!-- </a> -->
+    </div>
+
+    
+    <div class="row">
+        <div class="col-md-12 col-md-offset-1 text-center">
+            <ul class="nav nav-pills nav-justified">
+                <li>
+                    <a href="https://link.springer.com/article/10.1007/s10032-024-00472-z">
+                        <img src="assets/21.JPG" height="80px"><br>
+                        <h5><strong>ICFHR</strong></h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-21648-0_5">
+                        <img src="assets/21.JPG" height="80px"><br>
+                        <h5><strong>APSIPA (Soon)</strong></h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-21648-0_5">
+                        <img src="assets/21.JPG" height="80px"><br>
+                        <h5><strong>CVIU (Soon)</strong></h5>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <p class="section center">Project Descriptions</p>
+    <p>
+ 
+   The digitization of ancient palm leaf manuscripts is gaining traction due to challenges like limited datasets and complex text features. Previous studies have not thoroughly explored the application of advanced techniques on these manuscripts, particularly as deep learning approaches require large datasets. This paper investigates methods to enhance isolated glyph classification by focusing on both front-end and back-end processes. On the front end, we present multi-task preprocessing techniques, including data augmentation and image enhancement, to improve dataset quality and quantity. On the back end, we analyze visual backbones of deep learning models, such as CNNs (VGG, ResNet, EfficientNet) and attention-based models (ViT, DeiT, CvT). Our evaluation assesses the interaction between data augmentation and training data volume. We conducted experiments on Balinese, Sundanese, and Khmer scripts from the ICFHR 2018 contest, demonstrating effective training methods for the document analysis community.
+
+
+
+    </p>
+    <div class="flex-container margin-top-1em margin-bottom-1em">
+        <figure>
+        <img src="./assets/1.JPG">
+        <figcaption class="left-align"><span class="bold-text">Challenges: </span>Palm leaf manuscripts present significant challenges for historical document image analysis due to their complex character classes, alphabets, and numerals, which complicate binarization compared to standard scanned documents. The characters often overlap in formation, necessitating an advanced system for effective recognition and classification. Furthermore, publicly available datasets for these scripts are limited, with the smallest being Sundanese, containing about 4,000 training images and 2,000 testing images. Balinese and Khmer datasets are medium-sized. Our analysis indicates that many potential isolated characters can be extracted from palm leaf datasets, highlighting the need for more data to enhance deep learning training methods.
+
+
+
+</figcaption>
+        </figure>
+    </div>  
+
+
+
+
+
+    <p class="section" style="color: darkred;"><strong>Paper 1:Improving Isolated Glyph Classification
+Task for Palm Leaf Manuscripts
+</strong></p>
+
+
+
+        <p class="section center-align">The diagram of overview of architecture</p>
+    <div class="flex-container margin-top-1em margin-bottom-1em">
+        <figure class="center-align">
+            <div id="video-container">
+
+            <img src="./assets/2.JPG">
+            </div>
+            <figcaption class="left-align">
+                <span class="bold-text">Details: </span>
+                An overview of our training strategy. As part of the first step of the front-end,
+we extract new collections from the text-line and word/text palm leaf datasets. Newly
+additional and the existing datasets are then enhanced using data augmentation and
+image enhancement techniques. Finally, we inspect the results based on the different
+data sizes by performing different visual backbones of CNNs and ViTs on the back-end
+side.
+            </figcaption>
+        </figure>
+    </div>
+   
+
+        <p class="section center-align">Training CNNs and ViTs</p>
+    <div class="flex-container margin-top-1em margin-bottom-1em">
+        <figure class="center-align">
+            <div id="video-container">
+
+            <img src="./assets/3.JPG">
+            </div>
+            <figcaption class="left-align">
+                <span class="bold-text">Details: </span>
+              CNN-based models, such as VGG, ResNet, and EfficientNet, are put into fair comparisons to evaluate their performances at various stages.
+
+            </figcaption>
+        </figure>
+    </div>
+    <div class="flex-container margin-top-1em margin-bottom-1em">
+        <figure class="center-align">
+            <div id="video-container">
+
+            <img src="./assets/4.JPG">
+            </div>
+            <figcaption class="left-align">
+                <span class="bold-text">Details: </span>
+              The overall diagram of ViTs. (a) The standard architecture of ViT (b) The overview of architecture that introduces convolutional to transformer (CvT).
+
+            </figcaption>
+        </figure>
+    </div>
+        <p class="section center-align">Datasets</p>
+    <div class="flex-container margin-top-1em margin-bottom-1em">
+        <figure class="center-align">
+            <div id="video-container">
+
+            <img src="./assets/5.JPG">
+            </div>
+            <figcaption class="left-align">
+                <span class="bold-text">Details: </span>
+               The palm leaf datasets contained the original datasets from the ICFHR 2018
+contest and mixed them with newly extracted datasets, including classes, training, and
+testing images.
+
+            </figcaption>
+        </figure>
+    </div>
+
+        <p class="section center-align">Results Analysis</p>
+    <div class="flex-container margin-top-1em margin-bottom-1em">
+        <figure class="center-align">
+            <div id="video-container">
+
+            <img src="./assets/6.JPG">
+            </div>
+            <figcaption class="left-align">
+                <span class="bold-text">Details: </span>
+               The results of all the architectures trained for Track 1, Track 2, and Track 3
+with CNNs, CNNs + data augmentation, ViTs, and ViTs + data augmentation.
+
+            </figcaption>
+        </figure>
+
+    </div>
+
+
+        <p class="section" style="color: darkred;"><strong c>Paper 2: Coming soon after published paper</strong></p> 
+     <p class="section" style="color: darkred;"><strong c>Paper 3: Coming soon after published paper</strong></p> 
+
+<p class="section">BibTeX (Citation)</p>
+<pre class="selectable"><code>
+
+@inproceedings{thuon2022improving,
+  title={Improving isolated glyph classification task for palm leaf manuscripts},
+  author={Thuon, Nimol and Du, Jun and Zhang, Jianshu},
+  booktitle={International Conference on Frontiers in Handwriting Recognition},
+  pages={65--79},
+  year={2022},
+  organization={Springer}
+}
+</code></pre>
+    
+</div>
+</body>
+</html>
